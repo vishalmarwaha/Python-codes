@@ -12,3 +12,7 @@ def operation(fun,a,b):
 	
 result = operation(sum,10,20)
 print(result)
+
+
+
+
