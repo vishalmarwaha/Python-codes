@@ -1,4 +1,5 @@
 class operation:
+	'''Performing different arithmetic operations'''
 	result=0
 	def __init__(self,var1,var2):
 		self.var1=var1
@@ -32,3 +33,6 @@ print("Product of two numbers is: ")
 ope.__mul__()
 print("Quotient of two numbers is: ")
 ope.__div__()	
+
+print(operation.__dict__)
+
