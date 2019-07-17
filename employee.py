@@ -17,9 +17,9 @@ class employee():
 		print(self.data)
 		
 	def update(self):
-		key=raw_input('Enter the new field for class employee:- ')
+		key=raw_input('Enter the field for which value is to be updated:- ')
 		value=raw_input('Enter value for field:- ')
-		self.data.update({key:value})
+		self.data[key]=value
 	
 	def delete(self):
 		key=raw_input('Enter the key for which value is to be deleted:- ')
