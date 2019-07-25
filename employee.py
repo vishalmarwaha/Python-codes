@@ -1,23 +1,30 @@
 import sys
 
-data={'name':[],'eid':[],'salary':[],'dept_id':[],'branch_name':[]}
+data=[{'name':[],'eid':[],'salary':[],'dept_id':[],'branch_name':[]}]
 class employee():
+	i=0
 	def __init__(self,data):
 		self.data=data
 	
 	
 	def add(self,ename,emid,esalary,edept_id,ebranch_name):
-		self.data['name'].append(ename)
-		self.data['eid'].append(emid)
-		self.data['salary'].append(esalary)
-		self.data['dept_id'].append(edept_id)
-		self.data['branch_name'].append(ebranch_name)
+		self.data[self.i]['name']=ename
+		self.data[self.i]['eid'].append(emid)
+		self.data[self.i]['salary'].append(esalary)
+		self.data[self.i]['dept_id'].append(edept_id)
+		self.data[self.i]['branch_name'].append(ebranch_name)
+
 		
 	def show(self): 
 		value=raw_input('Enter the name for which data is to be searched:')
-		index = self.data['name'].index(value)
-		for key,values in self.data.items():
-				print(key,values[index])
+		length=len(self.data)
+		for x in range(length):
+			index = self.data[x]['name'].index(value)
+			print(index)
+			'''for key,values in self.data.():
+					print(key,values[index])'''
+		for values in self.data:
+			print(values)
 
 		
 	def update(self):
